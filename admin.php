@@ -12,33 +12,34 @@
 </head>
 
 <body>
-    <header id="header">
-        <h1>Administrador</h1>
-    </header>
+<?php
+Include("navbar.php")
+?><br>
+        <h1 id="header">Administrador</h1>
     <main>
         <div class="contenedor">
             <div class="añadir">
                 <h1>Añadir Producto</h1>
-                <form method="post" action="regProducto.php">
+                <form method="post" enctype="multipart/form-data" action="regProducto.php">
                     <div class="col-auto">
                         <i class="bi bi-cart-fill"></i>
                         <label for="exampleInputEmail1" class="form-label">Nombre del Producto</label>
-                        <input type="text" class="form-control" id="productoAñadir" name="nomP">
+                        <input type="text" required class="form-control" id="productoAñadir" name="nomP">
                     </div>
                     <div class="col-auto">
                         <i class="bi bi-cash-coin"></i>
                         <label for="exampleInputEmail1" class="form-label">Valor del Producto</label>
-                        <input type="number" class="form-control" id="valorAñadir" name="valP">
+                        <input type="number" required class="form-control" id="valorAñadir" name="valP">
                     </div>
                     <div class="col-auto">
-                        <i class="bi bi-123"></i>
-                        <label for="exampleInputEmail1" class="form-label">Existencia</label>
-                        <input type="number" class="form-control" id="existenciaAñadir" name="exis">
+                        <i class="bi bi-journal-text"></i>
+                        <label for="exampleInputEmail1" class="form-label">Descripción</label>
+                        <input type="text" required class="form-control" id="descripcion" name="desc">
                     </div>
                     <div class="col-auto">
                         <i class="bi bi-image"></i>
                         <label for="exampleInputEmail1" class="form-label">Url Imagen</label>
-                        <input type="text" class="form-control" id="imagenAñadir" name="urlI">
+                        <input type="file" required class="form-control" id="imagenAñadir" name="urlI">
                     </div><br>
                     <button type="submit" name="Enviar" class="btn btn-primary">Enviar</button>
                 </form>
@@ -55,7 +56,7 @@
                 <th scope="col">Codigo</th>
                 <th scope="col">Nombre del Producto</th>
                 <th scope="col">Valor del Producto</th>
-                <th scope="col">Existencia</th>
+                <th scope="col">Descripción</th>
                 <th scope="col">Url Imagen</th>
                 <th scope="col">Accion</th>
 
@@ -67,7 +68,7 @@
                 $Buscar = "%$search%";
                 include("Conexion.php");
                 $query = "SELECT * FROM Productos WHERE idProductos LIKE '$Buscar' or
-                Nombre_producto LIKE '$Buscar' or Precio LIKE '$Buscar' or Stock_disponible LIKE '$Buscar' or Imagen_producto";
+                Nombre_producto LIKE '$Buscar' or Precio LIKE '$Buscar' or descripcion LIKE '$Buscar' or Imagen_producto";
                 $cons = mysqli_query($conn, $query);
 
                 if (mysqli_num_rows($cons) !== 0) {
@@ -86,11 +87,11 @@
                                 <?php echo $vec[3]; ?>
                             </td>
                             <td>
-                                <?php echo $vec[4]; ?>
+                                <img height="40px" src="data:image/*;base64, <?php echo base64_encode($vec[4]) ?>" />
                             </td>
                             <td>
                                 <a href='frmactProducto.php?id=<?php echo $vec[0] ?>'>
-                                <i class="bi bi-pencil-square"></i></a>
+                                    <i class="bi bi-pencil-square"></i></a>
                                 <a href='eliminarProducto.php?id=<?php echo $vec[0] ?>'><i class="bi bi-trash3"></i></a>
                             </td>
                         </tr>
@@ -102,9 +103,8 @@
                 echo "Escribe un indicio de busqueda";
             } ?>
         </table>
-        <script src="confirmacionProducto.js"></script>
     </main>
-
+    <script src="confirmacionProducto.js"></script>
 
 
 
@@ -128,5 +128,4 @@
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
 </body>
-
 </html>

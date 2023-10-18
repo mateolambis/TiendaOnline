@@ -5,11 +5,11 @@ if (isset($_POST['Enviar'])) {
     $id=$_POST['id'];
     $Nombre_producto = $_POST['nomP'];
     $Precio = $_POST['valP'];
-    $Stock_disponible = $_POST['exis'];
-    $Imagen_producto = $_POST['urlI'];
+    $Descripcion=$_POST['desc'];
+    $Imagen_producto= addslashes(file_get_contents($_FILES['urlI']['tmp_name']));
     
     $query = "UPDATE Productos
-            SET Nombre_producto='$Nombre_producto', Precio='$Precio', Stock_disponible='$Stock_disponible', 
+            SET Nombre_producto='$Nombre_producto', Precio='$Precio', Descripcion='$Descripcion', 
             Imagen_producto='$Imagen_producto' where idProductos='$id'";
     $consulta = mysqli_query($conn, $query);
 
