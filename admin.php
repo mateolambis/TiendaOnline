@@ -57,7 +57,7 @@ Include("navbar.php")
                 <th scope="col">Nombre del Producto</th>
                 <th scope="col">Valor del Producto</th>
                 <th scope="col">Descripción</th>
-                <th scope="col">Url Imagen</th>
+                <th scope="col">Imagen</th>
                 <th scope="col">Accion</th>
 
             </tr>
@@ -87,7 +87,7 @@ Include("navbar.php")
                                 <?php echo $vec[3]; ?>
                             </td>
                             <td>
-                                <img height="40px" src="data:image/*;base64, <?php echo base64_encode($vec[4]) ?>" />
+                                <img  style="width: 200px; height: auto"  src="data:image/*;base64, <?php echo base64_encode($vec[4]) ?>" />
                             </td>
                             <td>
                                 <a href='frmactProducto.php?id=<?php echo $vec[0] ?>'>
