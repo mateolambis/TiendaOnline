@@ -11,18 +11,53 @@
 </head>
 
 <body>
-<?php
-Include("navbar.php")
-?><br>
+<header>
+        <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <strong>WILYMAT</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarHeader">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">Catalogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="frmactProducto.php" class="nav-link">Actualizar</a>
+                        </li>
+                    </ul>
+
+                    <a href="carrito.php" class="btn btn-primary">Carrito</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <main>
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <?php 
+            include 'conexion.php';
+            $q="SELECT * FROM productos";
+            $c=mysqli_query($conn,$q);
+
+            while ($a=mysqli_fetch_array($c)) {
+                       
+            ?>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="imagenes/productos/1/Correa.jpg" alt="">
+                        <img src="data:image/*;base64, <?php echo base64_encode($a[4])?>" alt="" style="width: 400px;height: auto;">
                         <div class="card-body">
-                            <h5 class="card-title">Correa Perros</h5>
-                            <p class="card-text"> $ 15.000</p>
+                            <h5 class="card-title"><?php echo $a[1] ?></h5>
+                            <p class="card-text"><?php echo $a[2] ?></p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <a href="" class="btn btn-primary">Detalles</a>
@@ -32,36 +67,7 @@ Include("navbar.php")
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="imagenes/productos/1/Correa.jpg" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Camas para perros</h5>
-                            <p class="card-text"> $ 50.000</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="" class="btn btn-primary">Detalles</a>
-                                </div>
-                                <a href="" class="btn btn-success">Agregar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="imagenes/productos/1/Correa.jpg" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Correa Perros</h5>
-                            <p class="card-text"> $ 15.000</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="" class="btn btn-primary">Detalles</a>
-                                </div>
-                                <a href="" class="btn btn-success">Agregar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <?php } ?>
             </div>
         </div>
     </main>
