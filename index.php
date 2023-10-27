@@ -42,34 +42,34 @@
     </header>
 
     <main>
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <?php 
-            include 'conexion.php';
-            $q="SELECT * FROM productos";
-            $c=mysqli_query($conn,$q);
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <?php 
+                include 'conexion.php';
+                $q="SELECT * FROM productos";
+                $c=mysqli_query($conn,$q);
 
-            while ($a=mysqli_fetch_array($c)) {
-                       
-            ?>
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="data:image/*;base64, <?php echo base64_encode($a[4])?>" alt="" style="width: 400px;height: auto;">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $a[1] ?></h5>
-                            <p class="card-text"><?php echo $a[2] ?></p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="" class="btn btn-primary">Detalles</a>
+                while ($a=mysqli_fetch_array($c)) {
+                        
+                ?>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="data:image/*;base64, <?php echo base64_encode($a[4])?>" alt="" style="width: 400px;height: auto;">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $a[1] ?></h5>
+                                <p class="card-text"><?php echo $a[2] ?></p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="" class="btn btn-primary">Detalles</a>
+                                    </div>
+                                    <a href="" class="btn btn-success">Agregar</a>
                                 </div>
-                                <a href="" class="btn btn-success">Agregar</a>
                             </div>
                         </div>
                     </div>
+                <?php } ?>
                 </div>
-            <?php } ?>
             </div>
-        </div>
     </main>
 
 
