@@ -1,23 +1,23 @@
 <?php
 if (isset($_POST['Enviar'])) {
 include 'conexion.php';
-$Nombre_producto=$_POST['nomP'];
-$Precio=$_POST['valP'];
-$Descripcion=$_POST['desc'];
-$Imagen_producto= addslashes(file_get_contents($_FILES['urlI']['tmp_name']));
+$nombre_completo=$_POST['nomC'];
+$tipo_cedula=$_POST['tipD'];
+$num_cedula=$_POST['numC'];
+$correo=$_POST['corr'];
 
 
 $query="INSERT INTO
-    Productos(Nombre_producto, Precio, Descripcion, Imagen_producto)
-    VALUES('$Nombre_producto', '$Precio', '$Descripcion', '$Imagen_producto')";
+    cliente(nombre_completo, tipo_cedula, num_cedula, correo)
+    VALUES('$nombre_completo', '$tipo_cedula', '$num_cedula', '$correo')";
 $consulta=mysqli_query($conn, $query);
 
 if($consulta){
-    echo "se inserto el registro a la base de datos correspondiente";
-    echo "<a href='admin.php'> volver</a>";
+    echo "Seguir al metodo de pago";
+    echo "<a href='admin.php'>Pagar</a>";
 }
 else{
-    echo " hay un error en la consulta";
+    echo "hay un error en la consulta";
 }
 }
 ?>
