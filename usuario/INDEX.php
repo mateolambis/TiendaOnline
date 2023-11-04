@@ -39,6 +39,13 @@
                             <?php echo $a[1] ?>
                         </span>
                         <img src="data:image/*;base64, <?php echo base64_encode($a[4]) ?>" alt="" class="img-item">
+                        <li><br>
+                            <i class="text-warning fa fa-star"></i>
+                            <i class="text-warning fa fa-star"></i>
+                            <i class="text-warning fa fa-star"></i>
+                            <i class="text-muted fa fa-star"></i>
+                            <i class="text-muted fa fa-star"></i>
+                        </li>
                         <span class="precio-item">
                             <?php echo $a[2] ?>
                         </span>
@@ -97,8 +104,8 @@
                     <a href="../usuario.php" class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </a>
                 </div>
             </div>
-
-    </section><br><br>
+        </div>
+    </section><br><br><br><br>
     <footer class="text-center text-lg-start bg-light text-muted">
         <!-- Section: Social media -->
         <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">

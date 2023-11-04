@@ -26,14 +26,13 @@ header h1{
     contain: paint;
 }
 /* SECCION CONTENEDOR DE ITEMS */
-.contenedor .contenedor-items{
+.contenedor .contenedor-items {
     margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Limita a 3 tarjetas por fila */
     grid-row-gap: 30px;
-    /* width: 60%; */
     width: 100%;
-    transition: .3s;
+    transition: 0.3s;
 }
 .contenedor .contenedor-items .item{
     min-height: 410px;
@@ -210,3 +209,14 @@ header h1{
         width: 100%;
     }
   }
+
+  .row {
+    --bs-gutter-x: 0.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
