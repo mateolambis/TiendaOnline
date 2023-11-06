@@ -15,7 +15,7 @@
 <?php
 Include("navbar.php")
 ?><br>
-        <h1 id="header">Administrador</h1>
+        <h1 id="header">Bienvenido Administrador</h1>
     <main>
         <div class="contenedor">
             <div class="añadir">
