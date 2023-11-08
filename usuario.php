@@ -10,15 +10,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
-        .contenedor {
-            width: 550px;
-            background: #EDEFF0;
-            padding: 30px;
-            margin: auto;
-            margin-top: 100px;
-            border-radius: 10px;
-            color: #959B9E;
-        }
+        .contenedor{
+        width: 500px;
+        background: #EDEFF0;
+        padding: 30px;
+        margin: auto;
+        margin-top: 100px;
+        border-radius: 10px;
+        color: #959B9E ;
+      }
     </style>
 </head>
 

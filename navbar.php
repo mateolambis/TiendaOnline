@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <style>
@@ -17,7 +15,7 @@
       width: 100%;
       height: 70px;
       top: 0;
-      position: fixed;
+      position: absolute;
       padding: 1rem 7%;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
@@ -50,7 +48,7 @@
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" >WILYMAT</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -66,7 +64,10 @@
           <a class="nav-link active" aria-current="page" href="login.php">Vender</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">Contactanos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="mostrarUsuarios.php">mostrar</a>
           </li>
         </ul>
       </div>
@@ -82,7 +83,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
     crossorigin="anonymous"></script>
-  <script src="js/bootstrap.js"></script>
 </body>
 
 </html>

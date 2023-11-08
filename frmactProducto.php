@@ -21,51 +21,70 @@ $vec = mysqli_fetch_array($consulta);
   <title>Document</title>
   <link rel="stylesheet" href="estilos.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-    <style>
-      img{
-        height: 20px;
-      }
-    </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <style>
+    img {
+      height: 20px;
+    }
+  </style>
 </head>
 
 <body>
 
   <div class="contenedor">
-  <div class="Actualizar">
-    <h1>Actualizar Producto</h1>
-    <form method="post" enctype="multipart/form-data" action="updateProducto.php">
-      <div class="col-auto">
-        <input class="table_item" required type="number" readonly value="<?php echo $vec[0]; ?>" name="id"><br>
-        <i class="bi bi-geo-alt-fill"></i>
-        <label for="exampleInputEmail1" class="form-label">nombre</label>
-        <input type="text" required class="form-control" id="nombreP" aria-describedby="origen" value="<?php echo $vec[1] ?>"
-          name="nomP">
-      </div>
-      <div class="col-auto">
-        <i class="bi bi-geo-alt-fill"></i>
-        <label for="exampleInputEmail1" class="form-label">Precio</label>
-        <input type="number" required class="form-control" id="pre" aria-describedby="destino" value="<?php echo $vec[2] ?>"
-          name="valP">
-      </div>
-      <div class="col-auto">
-        <i class="bi bi-calendar"></i>
-        <label for="exampleInputEmail1" class="form-label">Descripción</label>
-        <input type="text" required class="form-control" id="existe" aria-describedby="Salida" value="<?php echo $vec[3] ?>"
-          name="desc">
-      </div>
-      <div class="col-auto">
-        <i class="bi bi-calendar"></i>
-        <label for="exampleInputEmail1" class="form-label">Imagen URL</label>
-        
-        <input type="file" class="form-control" id="imgs" aria-describedby="image" 
-        name="urlI">
-      </div><br>
+    <div class="Actualizar">
+      <h1>Actualizar Producto</h1>
+      <form method="post" enctype="multipart/form-data" action="updateProducto.php">
+        <div class="col-auto">
+          <input class="table_item" required type="number" readonly value="<?php echo $vec[0]; ?>" name="id"><br>
+          <i class="bi bi-geo-alt-fill"></i>
+          <label for="exampleInputEmail1" class="form-label">nombre</label>
+          <input type="text" required class="form-control" id="nombreP" aria-describedby="origen"
+            value="<?php echo $vec[1] ?>" name="nomP">
+        </div>
+        <div class="col-auto">
+          <i class="bi bi-geo-alt-fill"></i>
+          <label for="exampleInputEmail1" class="form-label">Precio</label>
+          <input type="number" required class="form-control" id="pre" aria-describedby="destino"
+            value="<?php echo $vec[2] ?>" name="valP">
+        </div>
+        <div class="col-auto">
+          <i class="bi bi-calendar"></i>
+          <label for="exampleInputEmail1" class="form-label">Vendedor</label>
+          <input type="text" required class="form-control" id="existe" aria-describedby="Salida"
+            value="<?php echo $vec[3] ?>" name="desc">
+        </div>
+        <div class="col-auto">
+          <i class="bi bi-calendar"></i>
+          <label for="exampleInputEmail1" class="form-label">Imagen URL</label>
+          <input type="file" class="form-control" id="imgs" aria-describedby="image" name="urlI">
+          <?php
+          $path = "urlI/" . $id;
+          if (file_exists($path)) {
+            $directorio = opendir($path);
+            while ($Imagen_producto = readdir($directorio)) {
+              if (!is_dir($Imagen_producto)) {
+                echo "<div data='" . $path . "/" . $Imagen_producto .
+                  "'><a href='" . $path . "/" . $Imagen_producto . "'
+              title='Ver Archivo Adjunto'><span
+              class='glyphicon
+              glyphicon-picture'></span></a>";
+                echo "$Imagen_producto <a href='#' class='delete'
+              title='Ver Archivo Adjunto' ><span
+              class='glyphicon glyphicon-trash'
+              aria-hidden='true'></span></a></div>";
+                echo "img src='urlI/$id/$Imagen_producto'
+              width='300' />";
+              }
+            }
+          }
+          ?>
+        </div><br>
 
 
-      <button type="submit" name="Enviar" class="btn btn-primary">Actualizar</button>
-    </form>
+        <button type="submit" name="Enviar" class="btn btn-primary">Actualizar</button>
+      </form>
     </div>
   </div>
   </nav>

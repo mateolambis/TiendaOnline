@@ -2,14 +2,14 @@
 if (isset($_POST['Enviar'])) {
 include 'conexion.php';
 $Nombre_producto=$_POST['nomP'];
-$Precio=$_POST['valP'];
+$precio=$_POST['valP'];
 $Descripcion=$_POST['desc'];
 $Imagen_producto= addslashes(file_get_contents($_FILES['urlI']['tmp_name']));
 
 
 $query="INSERT INTO
-    Productos(Nombre_producto, Precio, Descripcion, Imagen_producto)
-    VALUES('$Nombre_producto', '$Precio', '$Descripcion', '$Imagen_producto')";
+    Productos(Nombre_producto, precio, Descripcion, Imagen_producto)
+    VALUES('$Nombre_producto', '$precio', '$Descripcion', '$Imagen_producto')";
 $consulta=mysqli_query($conn, $query);
 
 if($consulta){

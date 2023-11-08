@@ -36,7 +36,7 @@ header h1{
 }
 .contenedor .contenedor-items .item{
     min-height: 410px;
-    max-width: 300px;
+    max-width: 350px;
     margin: auto;
     border: 1px solid #666;
     border-radius: 10px;
@@ -45,8 +45,8 @@ header h1{
 }
 .contenedor .contenedor-items .item .img-item{
     width: 100%;
-    min-height: 258px;
-    object-fit:cover;
+    min-height: 400px;
+    object-fit:fill;
 }
 .contenedor .contenedor-items .item:hover{
     box-shadow: 0 0 10px #666;

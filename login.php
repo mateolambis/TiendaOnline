@@ -19,11 +19,12 @@
 
         <img class="login-box" src="imagenes/login/fondolegal.jpg" alt="">
         <form action="validar.php" method="post">
-            <h1  class="animate_animated animate_backInLeft">Bienvenido Admin. Ingresa tu usuario y contraseña</h1>
-            <p class="blanco">Usuario <input type="number" required placeholder="ingrese su cedula" name="usuario"></p>
+            <h1  class="animate_animated animate_backInLeft">Bienvenido Admin. Ingresa tu correo y contraseña</h1>
+            <p class="blanco">Correo <input type="email" required placeholder="ingrese su Correo" name="correo"></p>
             <p class="blanco">Contraseña <input type="password" required placeholder="ingrese su contraseña" name="contraseña"></p>
-            <input class="btn btn-success" type="submit" value="Ingresar">
-            <a href="inslogin.php" method="post" class="nav-link active">Registrate</a>
+            <input type="hidden" name="accion" value="acceso_user">
+            <input class="btn btn-success" type="submit" value="Ingresar"><br><br>
+            <div style="text-align: center;">¿No tienes cuenta?<br><a href="inslogin.php" method="post" class="btn btn-success">Registrate</a></div>
 
         </form>
     </div>

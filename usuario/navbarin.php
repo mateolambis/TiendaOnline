@@ -66,6 +66,9 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Contactanos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../mostrarUsuarios.php">mostrar</a>
+          </li>
         </ul>
       </div>
     </div>

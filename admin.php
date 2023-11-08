@@ -12,10 +12,10 @@
 </head>
 
 <body>
-<?php
-Include("navbar.php")
-?><br>
-        <h1 id="header">Bienvenido Administrador</h1>
+    <?php
+    include("navbar.php")
+        ?><br>
+    <h1 id="header">Bienvenido Administrador</h1>
     <main>
         <div class="contenedor">
             <div class="añadir">
@@ -33,7 +33,7 @@ Include("navbar.php")
                     </div>
                     <div class="col-auto">
                         <i class="bi bi-journal-text"></i>
-                        <label for="exampleInputEmail1" class="form-label">Descripción</label>
+                        <label for="exampleInputEmail1" class="form-label">Vendedor</label>
                         <input type="text" required class="form-control" id="descripcion" name="desc">
                     </div>
                     <div class="col-auto">
@@ -56,7 +56,7 @@ Include("navbar.php")
                 <th scope="col">Codigo</th>
                 <th scope="col">Nombre del Producto</th>
                 <th scope="col">Valor del Producto</th>
-                <th scope="col">Descripción</th>
+                <th scope="col">Vendedor</th>
                 <th scope="col">Imagen</th>
                 <th scope="col">Accion</th>
 
@@ -87,7 +87,8 @@ Include("navbar.php")
                                 <?php echo $vec[3]; ?>
                             </td>
                             <td>
-                                <img  style="width: 200px; height: auto"  src="data:image/*;base64, <?php echo base64_encode($vec[4]) ?>" />
+                                <img style="width: 200px; height: auto"
+                                    src="data:image/*;base64, <?php echo base64_encode($vec[4]) ?>" />
                             </td>
                             <td>
                                 <a href='frmactProducto.php?id=<?php echo $vec[0] ?>'>
@@ -128,4 +129,5 @@ Include("navbar.php")
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
