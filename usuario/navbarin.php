@@ -64,7 +64,7 @@
           <a class="nav-link active" aria-current="page" href="../login.php">Vender</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Contactanos</a>
+            <a class="nav-link active" aria-current="page" href="../conocenos.php">Conocenos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="../mostrarUsuarios.php">mostrar</a>

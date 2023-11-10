@@ -10,15 +10,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
-        .contenedor{
-        width: 500px;
-        background: #EDEFF0;
-        padding: 30px;
-        margin: auto;
-        margin-top: 100px;
-        border-radius: 10px;
-        color: #959B9E ;
-      }
+        .contenedor {
+            width: 500px;
+            background: #EDEFF0;
+            padding: 30px;
+            margin: auto;
+            margin-top: 100px;
+            border-radius: 10px;
+            color: #959B9E;
+        }
     </style>
 </head>
 
@@ -54,9 +54,22 @@
                     <label for="exampleInputEmail1" class="form-label">Correo</label>
                     <input type="text" required class="form-control" id="imagenAñadir" name="corr">
                 </div><br>
-                <button type="submit" name="Enviar" class="btn btn-primary">Enviar</button>
-            </form>
+
         </div>
+        <input type="hidden" name="item_number" value="1">
+        <!-- <input type="hidden" name="invoice" value="0012"> -->
+
+        <input type="hidden" name="lc" value="es_ES">
+        <input type="hidden" name="no_shipping" value="1">
+        <input type="hidden" name="image_url" value="https://picsum.photos/150/150">
+        <input type="hidden" name="return" value="<?= $baseUrl ?>/receptor.php">
+        <input type="hidden" name="cancel_return" value="<?= $baseUrl ?>/pago_cancelado.php">
+
+        <input type="hidden" name="return" value="http://localhost/boton_comprar/receptor.php">
+        <input type="hidden" name="cancel_return" value="http://localhost/boton_comprar/pago_cancelado.php">
+
+        <button type="submit" name="Enviar" class="btn btn-primary">Enviar</button>
+        </form>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
             crossorigin="anonymous"></script>

@@ -19,12 +19,15 @@
 
         <img class="login-box" src="imagenes/login/fondolegal.jpg" alt="">
         <form action="validar.php" method="post">
-            <h1  class="animate_animated animate_backInLeft">Bienvenido Admin. Ingresa tu correo y contraseña</h1>
+            <h1  class="animate_animated animate_backInLeft">Bienvenido Admin. Ingresa tu correo y contraseña</h1><br>
+            
             <p class="blanco">Correo <input type="email" required placeholder="ingrese su Correo" name="correo"></p>
             <p class="blanco">Contraseña <input type="password" required placeholder="ingrese su contraseña" name="contraseña"></p>
             <input type="hidden" name="accion" value="acceso_user">
-            <input class="btn btn-success" type="submit" value="Ingresar"><br><br>
-            <div style="text-align: center;">¿No tienes cuenta?<br><a href="inslogin.php" method="post" class="btn btn-success">Registrate</a></div>
+            <input class="btn btn-success" name="btn" type="submit" value="Ingresar"><br><br>
+            <div style="text-align: left;">Recuperar Contraseña<br><a href="inslogin.php" method="post" class="btn btn-success">Recuperar</a></div>
+            <div style="text-align: right;">¿No tienes cuenta?<br><a href="inslogin.php" method="post" class="btn btn-success">Registrate</a></div>
+            
 
         </form>
     </div>
@@ -32,7 +35,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <script src="login.js"></script>
 </body>
 
 </html>

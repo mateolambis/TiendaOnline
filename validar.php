@@ -1,22 +1,26 @@
 <?php
-include('conexion.php');
-$correo=$_POST['correo'];
-$contraseña=$_POST['contraseña'];
-session_start();
-$_SESSION['correo']=$correo;
+if (isset($_POST['btn'])) {
+  include 'conexion.php';
+  $correo = $_POST['correo'];
+  $contraseña = $_POST['contraseña'];
 
-$consulta="SELECT * FROM administrador where correo='$correo' and contraseña='$contraseña'";
-$resultado=mysqli_query($conn,$consulta);
+  $consulta = "SELECT * FROM administrador where correo='$correo' and contraseña='$contraseña'";
+  $resultado = mysqli_query($conn, $consulta);
 
-$filas=mysqli_num_rows($resultado);
+  if (mysqli_num_rows($resultado) == 1) {
+    $v = mysqli_fetch_array($resultado);
+    session_start();
 
-if($filas){
-  
-    header("location:admin.php");
-
-}else{
-  echo " hay un error en la consulta";
+    $_SESSION['nombre'] = $v[1];
+    $_SESSION['correo'] = $v[2];
+    $_SESSION['rolUsuario'] = $v[5];
+    if ($v['rolUsuario'] == 1) {
+      echo "<script>alert('Bienvenido Administrador');    
+                  window.location.href='admin.php'</script>";
+    } else if ($v['rolUsuario'] == 2) {
+      echo "<script>alert('Bienvenido Usuario');
+                  window.location.href='usuario/INDEX.php';</script>";
+    }
+  }
 }
-mysqli_free_result($resultado);
-mysqli_close($conexion);
 ?>

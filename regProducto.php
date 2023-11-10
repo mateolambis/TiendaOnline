@@ -14,7 +14,7 @@ $consulta=mysqli_query($conn, $query);
 
 if($consulta){
     echo "se inserto el registro a la base de datos correspondiente";
-    echo "<a href='admin.php'> volver</a>";
+    echo "<a href='boton_comprar/receptor.php'> volver</a>";
 }
 else{
     echo " hay un error en la consulta";

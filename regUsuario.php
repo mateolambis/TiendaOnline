@@ -14,7 +14,7 @@ $consulta=mysqli_query($conn, $query);
 
 if($consulta){
     echo "Seguir al metodo de pago";
-    echo "<a href='admin.php'>Pagar</a>";
+    echo "<a href='.php'>Pagar</a>";
 }
 else{
     echo "hay un error en la consulta";
