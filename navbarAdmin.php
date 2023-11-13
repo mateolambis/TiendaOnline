@@ -44,7 +44,10 @@
       border-bottom: 4px solid #000;
       transition: 0.4s;
     }
-
+    .custom-icon {
+      font-size: 35px;
+      color: black;
+    }
   </style>
 </head>
 <body>
@@ -58,7 +61,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="usuario/INDEX.php">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="INDEX.php">Inicio</a>
           </li>
           <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="login.php">Vender</a>
@@ -69,7 +72,11 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="mostrarUsuarios.php">mostrar</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="perfilAdmin.php">Tu perfil</a>
+          </li>
         </ul>
+        <a href="#" class="custom-icon"><i class="bi bi-person-circle"></i></a>
       </div>
     </div>
   </nav>

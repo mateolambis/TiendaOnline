@@ -12,7 +12,7 @@
 
 <body>
     <?php
-    include("navbar.php");
+    include("navbarAdmin.php");
     ?><br><br><BR></BR>
     <h1>Lista Usuarios</h1>
     <form class="d-flex" role="search">

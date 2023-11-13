@@ -9,7 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/login.css">
-
+    <style>
+        .button-container{
+            display: flex;
+            justify-content: space-between;
+        }
+        .button-container a{
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,14 +27,15 @@
 
         <img class="login-box" src="imagenes/login/fondolegal.jpg" alt="">
         <form action="validar.php" method="post">
-            <h1  class="animate_animated animate_backInLeft">Bienvenido Admin. Ingresa tu correo y contraseña</h1><br>
+            <h1  class="animate_animated animate_backInLeft">Iniciar sesión</h1><br>
             
             <p class="blanco">Correo <input type="email" required placeholder="ingrese su Correo" name="correo"></p>
             <p class="blanco">Contraseña <input type="password" required placeholder="ingrese su contraseña" name="contraseña"></p>
             <input type="hidden" name="accion" value="acceso_user">
-            <input class="btn btn-success" name="btn" type="submit" value="Ingresar"><br><br>
-            <div style="text-align: left;">Recuperar Contraseña<br><a href="inslogin.php" method="post" class="btn btn-success">Recuperar</a></div>
-            <div style="text-align: right;">¿No tienes cuenta?<br><a href="inslogin.php" method="post" class="btn btn-success">Registrate</a></div>
+            <input style="text-align: center;" class="btn btn-success" name="btn" type="submit" value="Ingresar"><br><br>
+            <div class="button-container"><label style="text-align: left;">Recuperar Contraseña<br><a href="recuperarContraseña.php" method="post">Recuperar</a></label>
+            <label style="text-align: right;">¿No tienes cuenta?<br><a href="inslogin.php" method="post">Registrate</a></label></div>
+            
             
 
         </form>

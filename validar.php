@@ -18,9 +18,12 @@ if (isset($_POST['btn'])) {
       echo "<script>alert('Bienvenido Administrador');    
                   window.location.href='admin.php'</script>";
     } else if ($v['rolUsuario'] == 2) {
-      echo "<script>alert('Bienvenido Usuario');
+      echo "<script>alert('No tienes acceso a la zona de administradores');
                   window.location.href='usuario/INDEX.php';</script>";
     }
+  } else {
+    echo "<script>alert('Usuario o contraseña incorrectos');    
+                  window.location.href='login.php'</script>";
   }
 }
 ?>

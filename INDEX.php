@@ -18,7 +18,7 @@
 
 <body>
     <?php
-    include("navbarin.php")
+    include("navbarClientes.php")
         ?><br><br><br><br>
 
     <section class="contenedor">
@@ -27,7 +27,7 @@
             <!-- Contenedor de elementos -->
             <div class="contenedor-items">
                 <?php
-                include '../conexion.php';
+                include 'conexion.php';
                 $q = "SELECT * FROM productos";
                 $c = mysqli_query($conn, $q);
 

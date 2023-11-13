@@ -24,7 +24,7 @@
 
 <body>
     <?php
-    include("navbar.php");
+    include("navbarAdmin.php");
     ?>
     <div class="contenedor">
         <form action="reglogin.php" method="post">

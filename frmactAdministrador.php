@@ -40,25 +40,25 @@ $vec = mysqli_fetch_array($consulta);
         <input class="table_item" required type="number" readonly value="<?php echo $vec[0]; ?>" name="id"><br>
         <i class="bi bi-geo-alt-fill"></i>
         <label for="exampleInputEmail1" class="form-label">nombre</label>
-        <input type="text" required class="form-control" id="nombreP" aria-describedby="origen" value="<?php echo $vec[1] ?>"
+        <input type="text" required class="form-control" id="nombreP" aria-describedby="nombre" value="<?php echo $vec[1] ?>"
           name="nombre">
       </div>
       <div class="col-auto">
         <i class="bi bi-geo-alt-fill"></i>
         <label for="exampleInputEmail1" class="form-label">correo</label>
-        <input type="email" required class="form-control" id="pre" aria-describedby="destino" value="<?php echo $vec[2] ?>"
+        <input type="email" required class="form-control" id="pre" aria-describedby="correo" value="<?php echo $vec[2] ?>"
           name="correo">
       </div>
       <div class="col-auto">
         <i class="bi bi-calendar"></i>
         <label for="exampleInputEmail1" class="form-label">Telefono</label>
-        <input type="tel" required class="form-control" id="existe" aria-describedby="Salida" value="<?php echo $vec[3] ?>"
+        <input type="tel" required class="form-control" id="existe" aria-describedby="telefono" value="<?php echo $vec[3] ?>"
           name="telefono">
       </div>
       <div class="col-auto">
         <i class="bi bi-calendar"></i>
         <label for="exampleInputEmail1" class="form-label">Contraseña</label>
-        <input type="password" class="form-control" id="imgs" aria-describedby="image"   value="<?php echo $vec[4] ?>" 
+        <input type="password" class="form-control" id="imgs" aria-describedby="contrasena"   value="<?php echo $vec[4] ?>" 
         name="contraseña">
       </div><br>
 

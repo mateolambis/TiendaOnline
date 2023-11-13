@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,37 +21,42 @@
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 
-    .navbar-brand{
+    .navbar-brand {
       font-size: 2rem;
     }
 
-    .navbar-brand:hover{
+    .navbar-brand:hover {
       border-bottom: 4px solid #000;
       transition: 0.4s;
     }
 
-    .container-fluid ul{
+    .container-fluid ul {
       font-size: 1.5rem;
       align-items: center;
     }
 
-    .container-fluid ul li a{
+    .container-fluid ul li a {
       padding: 5px 12px;
       letter-spacing: 2px;
       font-size: 18px;
     }
 
-    .container-fluid ul li a:hover{
+    .container-fluid ul li a:hover {
       border-bottom: 4px solid #000;
       transition: 0.4s;
+    }
+    .custom-icon {
+      font-size: 35px;
+      color: black;
     }
 
   </style>
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" >WILYMAT</a>
+      <a class="navbar-brand">WILYMAT</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -58,18 +64,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="INDEX.php">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="INDEX.php">Inicio</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../login.php">Vender</a>
+            <a class="nav-link active" aria-current="page" href="login.php">Vender</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../conocenos.php">Conocenos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../mostrarUsuarios.php">mostrar</a>
+            <a class="nav-link active" aria-current="page" href="conocenos.php">Conocenos</a>
           </li>
         </ul>
+        <a href="#" class="custom-icon"><i class="bi bi-person-circle"></i></a>
       </div>
     </div>
   </nav>
