@@ -1,10 +1,10 @@
 <?php
 if (isset($_POST['Enviar'])) {
 include 'conexion.php';
-$nombre_completo=$_POST['nomC'];
-$tipo_cedula=$_POST['tipD'];
-$num_cedula=$_POST['numC'];
-$correo=$_POST['corr'];
+$nombre_completo = $_POST['nombre'];
+$tipo_cedula=$_POST['tCedula'];
+$num_cedula =$_POST['cedula'];
+$correo= $_POST['correo'];
 
 
 $query="INSERT INTO
@@ -13,11 +13,11 @@ $query="INSERT INTO
 $consulta=mysqli_query($conn, $query);
 
 if($consulta){
-    echo "Seguir al metodo de pago";
-    echo "<a href='.php'>Pagar</a>";
+    echo "Te has registrado exitosamente";
+    echo "<a href='metodoPago.php'> Metodo de pago</a>";
 }
 else{
-    echo "hay un error en la consulta";
+    echo " hay un error en la consulta";
 }
 }
 ?>

@@ -72,7 +72,7 @@ if (mysqli_num_rows($resultado) == 1) {
                             <div class="form-group">
                                 <label for="nuevoTelefono">Telefono:</label>
                                 <input type="number" class="form-control" name="nuevoTelefono"
-                                    value="<?php echo $_SESSION['telefono']; ?>" readonly required>
+                                value="<?php echo $administrador['telefono']; ?>" required readonly>
                             </div>
                             <div class="form-group">
                                 <a href="perfilAdmin.php" class="btn btn-primary">Actualizar</a>

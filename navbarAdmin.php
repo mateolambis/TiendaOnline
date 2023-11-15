@@ -53,7 +53,7 @@
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" >WILYMAT</a>
+      <a class="navbar-brand">WILYMAT</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -72,11 +72,8 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="mostrarUsuarios.php">mostrar</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="perfilAdmin.php">Tu perfil</a>
-          </li>
         </ul>
-        <a href="#" class="custom-icon"><i class="bi bi-person-circle"></i></a>
+        <a href="perfilAdmin.php" class="custom-icon"><i class="bi bi-person-circle">Tu Perfil</i></a>
       </div>
     </div>
   </nav>

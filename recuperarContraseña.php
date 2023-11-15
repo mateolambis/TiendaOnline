@@ -24,18 +24,18 @@
 
 <body>
 <?php
-    include("navbar.php")
+    include("navbarAdmin.php")
         ?><br><br>
     <main>
         <div class="contenedor">
             <h1>restablecer Contraseña</h1>
-            <form method="post" enctype="multipart/form-data" action="mail_reset.php">
+            <form method="post" enctype="multipart/form-data" action="validarRecuerar.php">
                 <div class="col-auto">
                 <i class="bi bi-envelope"></i>
                     <label for="exampleInputEmail1" class="form-label">Email</label>
-                    <input type="email" required class="form-control" id="productoAñadir" name="">
+                    <input type="email" required class="form-control" id="productoAñadir" name="correo">
                 </div><br>
-                <button type="submit" name="restablecer" class="btn btn-primary">Restablecer</button> 
+                <button type="submit" onclick="javascript: return confirm('¿Deseas enviar tu contraseña a tu correo?')" name="restablecer" class="btn btn-primary">Restablecer</button> 
         </div>
         
         </form>

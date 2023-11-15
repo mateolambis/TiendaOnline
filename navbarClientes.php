@@ -73,7 +73,7 @@
             <a class="nav-link active" aria-current="page" href="conocenos.php">Conocenos</a>
           </li>
         </ul>
-        <a href="#" class="custom-icon"><i class="bi bi-person-circle"></i></a>
+        <a href="formularioCliente.php" class="custom-icon"><i class="bi bi-person-circle"></i></a>
       </div>
     </div>
   </nav>

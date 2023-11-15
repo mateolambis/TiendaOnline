@@ -27,29 +27,22 @@
     include("navbarClientes.php");
     ?>
     <div class="contenedor">
-        <form action="regUsuario.php" method="post">
-            <h1 class="animate_animated animate_backInLeft">Registrar Usuario</h1>
+        <form action="regFormulario.php" method="post">
+            <h1 class="animate_animated animate_backInLeft">Iniciar Sesión</h1>
             <div class="col-auto">
             <i class="bi bi-person-circle"></i>
-                <label for="exampleInputEmail1" class="form-label">Nombre Completo</label>
+                <label for="exampleInputEmail1" class="form-label">Nombre</label>
                 <input type="text" required placeholder="ingrese su Nombre" class="form-control" name="nombre">
-            </div><br>
-            <div class="col-auto">
-              <select class="form-select" aria-label="Default select example" name="tCedula">
-                <option selected>Tipo de Cedula</option>
-                <option value="Cedula">Cedula</option>
-                <option value="Tarjeta de identidad">Tarjeta de identidad</option>
-                <option value="Pasaporte">Pasaporte</option>
-              </select>
-            <div class="col-auto">
-            <i class="bi bi-phone-fill"></i>
-                <label for="exampleInputEmail1" class="form-label">Numero de cedula</label>
-                <input type="number" required placeholder="ingrese su Numero de celular" class="form-control" name="cedula">
             </div>
             <div class="col-auto">
             <i class="bi bi-envelope-fill"></i>
                 <label for="exampleInputEmail1" class="form-label">Correo</label>
                 <input type="email" required placeholder="ingrese su Correo" class="form-control" name="correo">
+            </div>
+            <div class="col-auto">
+            <i class="bi bi-phone-fill"></i>
+                <label for="exampleInputEmail1" class="form-label">Telefono</label>
+                <input type="tel" required placeholder="ingrese su Numero de celular" class="form-control" name="telefono">
             </div><br>
             <button type="submit" name="Enviar" class="btn btn-primary">Enviar</button>
         </form>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="usuario/style.css">
+    <link rel="stylesheet" href="style.css">
     <!-- Incluye los archivos CSS de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Acerca de Nosotros</title>
@@ -12,7 +12,7 @@
 
 <body>
     <?php
-    include("navbar.php")
+    include("navbarClientes.php")
     ?><br>
 
     <!DOCTYPE html>
@@ -32,8 +32,8 @@
                 
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="usuario/imagenes/conocenos/conocenos1.jpeg" alt="Imagen Principal" class="img-fluid"><br><br><br><br><br><br><br><br><br><br><br>
-                        <img src="usuario/imagenes/conocenos/conocenos2.jpeg" alt="Imagen Principal" class="img-fluid">
+                        <img src="imagenes/conocenos/conocenos1.jpeg" alt="Imagen Principal" class="img-fluid"><br><br><br><br><br><br><br><br><br><br><br>
+                        <img src="imagenes/conocenos/conocenos2.jpeg" alt="Imagen Principal" class="img-fluid">
                     </div>
                     <div class="col-md-5">
                         <h2>Historia de la Empresa</h2> <br>
@@ -66,7 +66,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="team-member">
-                            <img src="usuario/imagenes/conocenos/MATEO_LAMBIS.jpeg" alt="Miembro del Equipo 1" class="img-fluid">
+                            <img src="imagenes/conocenos/MATEO_LAMBIS.jpeg" alt="Miembro del Equipo 1" class="img-fluid">
                             <h2>MATEO LAMBIS</h2>
                             <p>Desarollador de aplicaciones y paginas web con conocimientos en lenguajes
                                 de programacion tales como php, java y JavaScript tambien maneja
@@ -75,7 +75,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="team-member">
-                            <img src="usuario/imagenes/conocenos/WILDRINGS_FRANCO.jpeg" alt="Miembro del Equipo 2" class="img-fluid">
+                            <img src="imagenes/conocenos/WILDRINGS_FRANCO.jpeg" alt="Miembro del Equipo 2" class="img-fluid">
                             <h2>Wildrings Fanco</h2>
                             <p>Desarollador de aplicaciones y paginas web con conocimientos en lenguajes
                                 de programacion tales como php, java y JavaScript tambien maneja

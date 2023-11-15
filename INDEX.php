@@ -101,7 +101,7 @@
                             $120.000,00
                         </span>
                     </div>
-                    <a href="../usuario.php" class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </a>
+                    <a href="usuario.php" class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </a>
                 </div>
             </div>
         </div>
